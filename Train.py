@@ -5,7 +5,6 @@ import NER
 import Perspective_image
 import tesseract_OCR
 import bbox
-from PIL import Image
 
 filename='Sample.jpeg'
 coordinates = 'yolo.txt'
