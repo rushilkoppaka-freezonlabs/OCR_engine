@@ -2,7 +2,6 @@ import cv2
 import pytesseract
 from pytesseract import Output
 import numpy as np
-import NER
 
 def img_data(img):
     #gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
