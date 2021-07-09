@@ -1,0 +1,8 @@
+invoice_details
+company_details
+customer_details
+table
+bank_details
+bottom_info
+company_logo
+top_info
