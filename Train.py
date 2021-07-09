@@ -20,7 +20,6 @@ for i in range(0,len(location)):
 print(dict)
 for i in range(len(location)):
     x,y,w,h = location[i]
-    box=(x,y,w,h)
     print(img[int(y):int(y + h), int(x):int(x + w)].shape, ' ', x, ' ', w,' ',y,' ',h)
     image, line_conf,sentence= tesseract_OCR.img_data(img[int(y):int(y + h), int(x):int(x + w)])
     dict[class_list[i]] = dict[class_list[i]] +sentence + '\n'
