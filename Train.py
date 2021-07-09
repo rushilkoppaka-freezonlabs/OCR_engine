@@ -1,8 +1,4 @@
 import cv2
-# import numpy as np
-# import pytesseract
-# import NER
-# import Perspective_image
 import tesseract_OCR
 import bbox
 
