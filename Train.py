@@ -23,10 +23,8 @@ for i in range(len(location)):
     box=(x,y,w,h)
     print(img[int(y):int(y + h), int(x):int(x + w)].shape, ' ', x, ' ', w,' ',y,' ',h)
     image, line_conf,sentence= tesseract_OCR.img_data(img[int(y):int(y + h), int(x):int(x + w)])
-    #cv2.imshow(str(i),img[int(y):int(y + h), int(x):int(x + w)])
     dict[class_list[i]] = dict[class_list[i]] +sentence + '\n'
-    #cv2.imshow(str(i),img[int(y):int(y + h), int(x):int(x + w)])
+    
 print(dict)
-cv2.waitKey(0)
 
 
