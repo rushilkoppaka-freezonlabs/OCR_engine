@@ -28,7 +28,7 @@ def img_data(img):
                 sentence= sentence +', ' + lines[i]
                 line_conf.append([lines[i], round(confs[i], 3)])
                 (x, y, w, h) = (text['left'].iloc[i], text['top'].iloc[i], text['width'].iloc[i], text['height'].iloc[i])
-                cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                #cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
 
     return img,line_conf,sentence
 
