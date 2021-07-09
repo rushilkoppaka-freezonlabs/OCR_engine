@@ -2,7 +2,7 @@ import cv2
 import pytesseract
 from pytesseract import Output
 import numpy as np
-import NER
+#import NER
 #filename = 'invoice14_processed.png'
 
 # read the image and get the dimensions
