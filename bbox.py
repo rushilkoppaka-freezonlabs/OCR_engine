@@ -27,6 +27,10 @@ def get_bbox(image,coordinates,classes):
          h= h*image.shape[0]
          y=y*image.shape[0]
          y = y - h/2
+         if x<0:
+            x=0
+         if y<0:
+            y=0
          location.append([x,y,w,h])
          class_list.append(dict_class[data[i][0]])
    f.close()
