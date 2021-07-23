@@ -26,7 +26,11 @@ def Train(filename='Sample.jpeg',coordinates = 'yolo.txt',classes = 'classes.txt
             Searchable_pdf_converter.img_to_searchablepdf('table.jpg')
             table_df=Table_extract.table_extract('test.pdf')
             Table_extract.save_table(table_df,table_num=j)
-            tables.append(table_df)
+            Table = table_df
+            table = Table.to_dict('split')
+            del table['index']
+            del table['columns']
+            tables.append(table)
         else:
             image, line_conf,sentence= tesseract_OCR.img_data(img[int(y):int(y + h), int(x):int(x + w)])
             dict[class_list[i]] = dict[class_list[i]] +sentence + '\n'
