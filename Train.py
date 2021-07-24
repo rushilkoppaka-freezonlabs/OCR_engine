@@ -30,12 +30,11 @@ def Train(filename='Sample.jpeg',coordinates = 'yolo.txt',classes = 'classes.txt
             table = Table.to_dict('split')
             del table['index']
             del table['columns']
-            tables.append(table)
+            dict[class_list[i]] = dict[class_list[i]] + table + '\n'
         else:
             image, line_conf,sentence= tesseract_OCR.img_data(img[int(y):int(y + h), int(x):int(x + w)])
             dict[class_list[i]] = dict[class_list[i]] +sentence + '\n'
     print(dict)
-    return dict,tables
-
+    return dict
 
 
